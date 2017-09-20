@@ -1,0 +1,11 @@
+# binaries and outputs
+stfd*
+*.o
+*.pgm
+
+# benchmark stuff
+**/benchmark_args.csv
+*.nvvp
+
+# editor files
+.vscode
