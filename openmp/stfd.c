@@ -79,11 +79,21 @@ int main(int argc, char **argv)
 			help("You must provide the path to the image to process.");
 		}
 
+#if BENCHMARKMODE
+		verbose_lvl = 0;
+#endif
+
 		if (verbose_lvl > 0) {
 			printf("detecting features for %s\n", filepath);
 			printf("sigma = %0.3f, windowsize = %d, max_features = %d\n", sigma, windowsize, max_features);
 			printf("max threads = %d\n", omp_get_max_threads());
 		}
+
+#if BENCHMARKMODE
+		printf("detecting features for %s\n", filepath);
+		printf("sigma = %0.3f, windowsize = %d, max_features = %d\n", sigma, windowsize, max_features);
+		printf("max threads = %d\n", omp_get_max_threads());
+#endif
 
 		int width;
 		int height;
