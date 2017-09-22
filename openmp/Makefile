@@ -1,5 +1,5 @@
 CC=gcc
-CCFLAGS=-Wall -fopenmp
+CCFLAGS=-std=c99 -Wall -fopenmp
 LDFLAGS=-fopenmp -lm
 SOURCES=$(wildcard *.c)
 OBJECTS=$(SOURCES:.c=.o)
