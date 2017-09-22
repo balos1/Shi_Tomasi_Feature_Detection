@@ -1,5 +1,5 @@
 # binaries and outputs
-stfd*
+stfd
 *.o
 *.pgm
 
