@@ -384,7 +384,7 @@ unsigned int cuda_find_features(data_wrapper_t *d_eigenvalues, int max_features,
         for (int i = 0; i < image_size && features_count < max_features; ++i) {
             // Ignore top left, top right, bottom right, bottom left edges of image.
             if (eigenvalues[i].x <= ignore_x || eigenvalues[i].y <= ignore_y ||
-                eigenvalues[i].x >= image_height-1-ignore_x || eigenvalues[i].y >= image_width-1-ignore_y) {
+                eigenvalues[i].x >= image_width-1-ignore_x || eigenvalues[i].y >= image_height-1-ignore_y) {
                 continue;
             }
 
